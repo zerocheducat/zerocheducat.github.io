@@ -1,0 +1,673 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  
+  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};</script>
+  
+  
+  <title>
+    搭建hexo的心得体会 |
+    
+    欢迎来到我的神奇妙妙屋Ciallo~(∠・ω&lt; )⌒☆
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="欢迎来到我的神奇妙妙屋！ 以下为作者本人在搭建此博客的心得体会，不定期写入2024&#x2F;11&#x2F;18现在博客已经基本可以运行了，包括音乐栏当中的好玩的网站，以及超级好听的音乐，强烈推荐大家去听（笑关于hexo的基本搭建，各位可以访问hexo直接抵达官方下载地址，跟着一步步做，不会出太大问题 以下将列举一些常见的错误或报错信息 123456(node:24016) Experiment">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建hexo的心得体会">
+<meta property="og:url" content="https://zerocheducat.github.io/2024/11/18/%E6%90%AD%E5%BB%BAhexo%E7%9A%84%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/">
+<meta property="og:site_name" content="欢迎来到我的神奇妙妙屋Ciallo~(∠・ω&lt; )⌒☆">
+<meta property="og:description" content="欢迎来到我的神奇妙妙屋！ 以下为作者本人在搭建此博客的心得体会，不定期写入2024&#x2F;11&#x2F;18现在博客已经基本可以运行了，包括音乐栏当中的好玩的网站，以及超级好听的音乐，强烈推荐大家去听（笑关于hexo的基本搭建，各位可以访问hexo直接抵达官方下载地址，跟着一步步做，不会出太大问题 以下将列举一些常见的错误或报错信息 123456(node:24016) Experiment">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-18T09:16:54.000Z">
+<meta property="article:modified_time" content="2024-11-19T14:25:23.189Z">
+<meta property="article:author" content="zerocheducat">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="欢迎来到我的神奇妙妙屋Ciallo~(∠・ω< )⌒☆" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff5252" />
+          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+         M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="#ff5252" />
+        </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/">首页</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/archives">归档</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/about">关于</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/friend">友链</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">搭建hexo的心得体会</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main"><article id="post-搭建hexo的心得体会" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <a href="/2024/11/18/%E6%90%AD%E5%BB%BAhexo%E7%9A%84%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-11-18T09:16:54.000Z" itemprop="datePublished">2024-11-18</time>
+    <time style="display: none;" id="post-update-time">2024-11-19</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <p>欢迎来到我的神奇妙妙屋！</p>
+<p>以下为作者本人在搭建此博客的心得体会，不定期写入<br>2024&#x2F;11&#x2F;18<br>现在博客已经基本可以运行了，包括音乐栏当中的好玩的网站，以及超级好听的音乐，强烈推荐大家去听（笑<br>关于hexo的基本搭建，各位可以访问<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">hexo</a>直接抵达官方下载地址，跟着一步步做，不会出太大问题</p>
+<p>以下将列举一些常见的错误或报错信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(node:24016) ExperimentalWarning: CommonJS module C:\Program Files\nodejs\node_modules\npm\node_modules\debug\src\node.js is loading ES Module C:\Program Files\nodejs\node_modules\npm\node_modules\supports-color\index.js using require().</span><br><span class="line">Support for loading ES Module in require() is an experimental feature and might change at any time</span><br><span class="line">(Use node --trace-warnings ... to show where the warning was created)</span><br><span class="line"> up to date in 1s</span><br><span class="line"> 38 packages are looking for funding</span><br><span class="line">  run npm fund for details</span><br></pre></td></tr></table></figure>
+
+<p>这个警告信息表明你的 Node.js 环境正在使用 CommonJS 模块加载一个 ES 模块，这在 Node.js 中是一个实验性特性，可能在未来的版本中会有所变化。具体来说，这个警告是由于 debug 模块在加载 supports-color 模块时使用了 require()，而 supports-color 是一个 ES 模块。一般不会有什么影响，忽略即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html  （此处可点击查看官方解决方案）</span><br><span class="line">Error: Spawn failed</span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (D:\hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)</span><br><span class="line">    at ChildProcess.emit (node:events:507:28)</span><br><span class="line">    at cp.emit (D:\hexo\node_modules\cross-spawn\lib\enoent.js:34:29)</span><br><span class="line">    at ChildProcess._handle.onexit (node:internal/child_process:294:12)</span><br></pre></td></tr></table></figure>
+
+
+<p>这是一个非常常见的问题。<br>出现 FATAL Something’s wrong. Maybe you can find the solution here: <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">https://hexo.io/docs/troubleshooting.html</a> Error: Spawn failed 错误时，通常是由于 Hexo 部署过程中出现了问题。这个错误通常与执行某些外部命令（如 Git 部署命令）失败有关。具体来说，Spawn failed 可能表示 Hexo 在尝试执行子进程时失败，通常是因为以下原因：<br>常见原因及解决方法</p>
+<ol>
+<li>Git 配置问题<br>如果你正在使用 Git 来部署 Hexo，确保你已经正确安装并配置了 Git，并且在系统环境变量中包含了 Git 的路径。<br>运行以下命令来检查 Git 是否正确安装：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<p>如果 Git 没有正确安装或无法识别，可以重新安装 Git：Git 官网下载，并确保将 Git 添加到环境变量中。<br>2. 缺少 git 或 ssh 执行权限<br>有时 hexo-deployer-git 插件会因为没有足够的权限来执行 Git 或 SSH 命令而失败。<br>确保你有权限执行 Git 命令，并且已经配置好 SSH 密钥（如果你使用的是 Git 通过 SSH 部署）。<br>你可以通过以下命令检查 SSH 配置是否正确：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>（请不要点击此处显示链接信息，直接复制前面的代码）</p>
+<p>如果配置正确，会看到 GitHub 的欢迎信息。</p>
+<ol start="3">
+<li>Node.js 版本问题<br>hexo-deployer-git 插件可能与 Node.js 版本不兼容。你可以检查当前使用的 Node.js 版本：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>Hexo 和它的插件通常要求使用稳定版本的 Node.js，最好使用长期支持（LTS）版本。<br>如果 Node.js 版本过高，可能会导致兼容性问题，尝试安装一个 LTS 版本的 Node.js：Node.js 官网<br>4. 依赖问题<br>运行 npm install 安装所有缺失的依赖项。确保你已经在 Hexo 项目的根目录中，并且执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>如果出现 npm 安装错误，尝试使用 npm ci 来重新安装依赖项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ci</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>检查 Hexo 部署配置<br>确保在 _config.yml 中的部署配置是正确的。以下是一个典型的 Git 部署配置：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/yourusername/your-repository.git    //（请根据自己账户实际情况填写）</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>确保 repo 地址正确，并且你有权限访问该 Git 仓库。如果你使用 SSH 部署，确保 repo 配置为 SSH 链接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:yourusername/your-repository.git  （上同，不再赘述）</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>路径或文件名问题<br>确保你的 Hexo 项目路径中没有特殊字符或空格，特别是在 Windows 系统中，某些路径问题可能会导致命令执行失败。<br>尝试将 Hexo 项目文件夹移动到没有空格或特殊字符的路径下，如 C:\Hexo。</li>
+<li>检查 Hexo 部署日志<br>如果上述步骤没有解决问题，建议查看 Hexo 的详细日志来获取更多信息。运行部署命令时，使用 –debug 参数来输出更详细的错误信息：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy --debug</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>重新安装插件<br>如果 hexo-deployer-git 插件出现问题，尝试重新安装插件：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-deployer-git</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>在下载或者部署到github库的过程中请保证链接的网络畅通且没有问题，否则就会产生以下问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(node:28032) ExperimentalWarning: CommonJS module C:\Program Files\nodejs\node_modules\npm\node_modules\debug\src\node.js is loading ES Module C:\Program Files\nodejs\node_modules\npm\node_modules\supports-color\index.js using require().</span><br><span class="line">Support for loading ES Module in require() is an experimental feature and might change at any time</span><br><span class="line">(Use node --trace-warnings ... to show where the warning was created)</span><br><span class="line">npm error code ETIMEDOUT</span><br><span class="line">npm error syscall connect</span><br><span class="line">npm error errno ETIMEDOUT</span><br><span class="line">npm error network request to https://registry.npmjs.org/hexo-cli failed, reason: connect ETIMEDOUT 104.16.25.34:443</span><br><span class="line">npm error network This is a problem related to network connectivity.</span><br><span class="line">npm error network In most cases you are behind a proxy or have bad network settings.</span><br><span class="line">npm error network</span><br><span class="line">npm error network If you are behind a proxy, please make sure that the</span><br><span class="line">npm error network &#x27;proxy&#x27; config is set properly.  See: &#x27;npm help config&#x27;</span><br><span class="line">npm error A complete log of this run can be found in: C:\Users\A\AppData\Local\npm-cache\_logs\2024-11-13T12_17_10_749Z-debug-0.log</span><br></pre></td></tr></table></figure>
+
+<p>这个时候就可以考虑换个网络，或者打入一个镜像，以下为解决方案：</p>
+<ol>
+<li>检查网络连接<br>确保你的计算机有稳定的互联网连接。<br>如果你在使用 Wi-Fi，尝试切换到有线连接，或者重新启动路由器。</li>
+<li>检查代理设置<br>如果你处于公司或学校网络，可能存在代理服务器限制。你可以通过以下命令检查 npm 的代理设置：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get proxy</span><br><span class="line">npm config get https-proxy</span><br></pre></td></tr></table></figure>
+<p>如果这些代理设置不正确或者不需要使用代理，你可以取消它们：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+<p>如果你确实需要使用代理，请确保代理设置正确。<br>3. 增加 npm 的连接超时<br>你可以尝试通过增加 npm 的网络请求超时时间来解决超时问题。运行以下命令增加超时值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> <span class="built_in">timeout</span> 60000</span><br></pre></td></tr></table></figure>
+<p>这将超时限制设置为 60 秒（默认是 30 秒），有时可以避免超时错误。<br>4. 更换网络或 VPN<br>如果你处于某些限制性网络环境中（如公司或学校的网络），尝试使用 VPN 或切换到其他网络环境（例如家庭网络或移动热点）进行安装。<br>5. 清理 npm 缓存<br>如果网络连接正常但问题仍然存在，可以尝试清理 npm 缓存，以防缓存中的某些错误数据导致问题：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>检查 npm 配置<br>如果问题是由 npm 配置引起的，你可以通过以下命令重置 npm 配置：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config edit</span><br></pre></td></tr></table></figure>
+<p>这会打开 npm 配置文件，你可以检查是否有不正确的配置导致连接问题。</p>
+<p>Hexo 安装过程一直在加载可能是由于网络问题或者 npm 配置导致的。以下是一些解决方法，可以帮助你加速或解决 Hexo 的下载问题。</p>
+<ol>
+<li>使用国内镜像源<br>由于网络连接到官方的 npm 源可能较慢，可以尝试使用国内的 npm 镜像源。一般推荐使用淘宝的镜像源：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com/    //（此处是一个镜像，可直接复制前面链接使用）</span><br></pre></td></tr></table></figure>
+<p>然后重新执行安装命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>使用 cnpm<br>如果直接使用 npm 速度较慢，也可以尝试使用 cnpm（中国 npm）来安装。首先，安装 cnpm：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com     //（上同，不再赘述）</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，用 cnpm 来安装 Hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>清理 npm 缓存<br>缓存问题有时会导致下载卡住，可以尝试清理缓存：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+<p>然后重新尝试安装 Hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>增加超时设置<br>如果网络不稳定，可以增加 npm 的超时设置，避免因为超时导致安装失败：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> <span class="built_in">timeout</span> 60000</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>使用 VPN 或更换网络<br>如果以上方法无效，可以尝试使用 VPN 或者换一个网络环境，特别是在某些限制性网络环境中，这些操作可能会有所帮助。</li>
+<li>更新 npm<br>确保你的 npm 是最新版本，以避免可能的兼容性或网络问题：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure>
+<p>更新后，重新尝试安装 Hexo。</p>
+<p>暂时先写到此，后面想起来继续补充，byebye！(∠・ω&lt; )⌒☆</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="我出生了" class="lazyload">
+        
+      
+      <a href="/2024/11/14/%E6%88%91%E5%87%BA%E7%94%9F%E4%BA%86/"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+        
+          我出生了
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="zerocheducat" class="lazyload">
+  <div class="sidebar-author-name">zerocheducat</div>
+  <div class="sidebar-description">Ciallo~(∠・ω&lt; )⌒☆</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+</div>
+      
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2024
+      <span class="footer-info-sep"></span>
+      zerocheducat
+    </div>
+    
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        2.4k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:10
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        <div class="sidebar-top">
+          <img src="/images/taichi.png" height="50" width="50" alt="backtop" />
+          <div class="arrow-up"></div>
+        </div>
+        <div id="mask"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="zerocheducat" class="lazyload">
+  <div class="sidebar-author-name">zerocheducat</div>
+  <div class="sidebar-description">Ciallo~(∠・ω&lt; )⌒☆</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '0.3.4' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+  </body>
+  </html>
+
