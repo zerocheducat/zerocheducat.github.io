@@ -1,0 +1,65 @@
+/* ===== Banner 轮播 & 标题效果 for Hexo Butterfly ===== */
+
+/* 让 #page-header 淡入淡出背景图 */
+#page-header {
+  transition: background-image 0s ease-in-out, opacity 0.8s ease-in-out;
+  will-change: background-image, opacity;
+}
+
+/* 切换时的淡出态 */
+#page-header.header-fade {
+  opacity: 0.25;
+}
+
+/* 标题渐变 + 柔光 */
+#site-name, .site-title {
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #6a5af9, #00c2ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: titleGradientShift 8s ease infinite;
+  text-shadow: 0 0 10px rgba(229,46,113,0.25), 0 0 20px rgba(0,194,255,0.15);
+}
+
+#site-name:hover, .site-title:hover {
+  filter: drop-shadow(0 0 12px rgba(106,90,249,0.45));
+  transform: translateZ(0) scale(1.03);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* 副标题（含动态打字生成的） */
+#subtitle, .site-subtitle, .typed-subtitle {
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+}
+
+/* 打字光标 */
+.typed-cursor {
+  font-weight: 400;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+/* 移动端稍降高度占比 */
+@media (max-width: 768px) {
+  #page-header {
+    min-height: 58vh !important;
+  }
+}
+
+@keyframes titleGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* 若主题未提供图，保证有底色 */
+#page-header[style=""] {
+  background-color: #0e0e10;
+}
